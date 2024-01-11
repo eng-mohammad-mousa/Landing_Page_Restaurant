@@ -1,0 +1,20 @@
+@import "sass/Helpers/Variables";
+
+@import "sass/Layout/Fonts";
+@import "sass/Layout/Style4AllElement";
+@import "sass/Layout/Grid";
+
+
+@import "sass/Components/button";
+@import "sass/Components/headerOfSection";
+@import "sass/Components/upArrowAnimation";
+@import "sass/Components/socialMediaAnimation";
+
+
+@import "sass/Layout/Nav";
+@import "sass/Pages/Home";
+@import "sass/Layout/Footer";
+
+
+//sass --watch A:\Landing_Pages\Landing_Page_Restaurant\sass:A:\Landing_Pages\Landing_Page_Restaurant\Css
+//sass --watch A:\Landing_Pages\Landing_Page_Restaurant\sass:A:\Landing_Pages\Landing_Page_Restaurant\Css --style compressed

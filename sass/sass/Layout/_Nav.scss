@@ -1,0 +1,74 @@
+/* ******************* */
+/*         Nav         */
+/* ******************* */
+@media screen and (max-width:767px) {            
+    .nav-active{
+        padding:8px 5px;
+        border-radius: 15px ;
+        background: black;
+        color:$yellow !important;
+        font-weight: bold;
+        transform: scale(1.1);
+        &:hover{
+            border-radius: 15px ;
+            background: black;
+            color:$yellow;
+            transform: scale(1.1);
+        }
+    }
+}
+@media screen and (min-width:768px){
+    .nav-active{
+        color:$yellow !important;
+        font-weight:bold;
+        
+    }
+}
+
+nav{
+    
+    background-color:rgba(black, 1);
+    div > a{
+        align-items:center;
+        display:flex;
+        font-family: 'Lemonada', cursive !important;
+        font-weight: bold;
+        &:hover{
+            color:$yellow !important;
+        }
+        .logo-name{
+            font-family: 'Lemonada', cursive !important;
+            font-weight: bold;
+            span{color:$yellow; font-family: inherit; font-weight: inherit;} 
+            
+        }
+    } 
+    button{
+        border-color:transparent !important;
+        box-shadow: none !important;
+        outline: none !important;
+        span{
+            color:$yellow;
+            font-size:30px;
+        }
+        &:focus{
+            box-shadow: none !important;
+        }
+
+    }
+    .nav-item{
+        margin:0px 5px;
+        text-align: center;
+    }
+    .nav-link{
+        color:white;
+        &:hover{
+            color:$yellow !important;
+            font-weight: bold;
+        }
+    }
+}
+
+#body > section , #body > footer{
+    padding-top: 66px;
+}

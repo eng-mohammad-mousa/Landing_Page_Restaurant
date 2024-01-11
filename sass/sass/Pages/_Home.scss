@@ -1,0 +1,411 @@
+body {
+    position: relative;
+}
+
+// *************************
+//         header
+// *************************
+.header {
+    background: linear-gradient(to bottom, rgba(black, .95), rgba(black, .65));
+    color: white;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    .content {
+
+        h1,
+        h2 {
+            font-family: 'Lemonada', cursive;
+            font-weight: bolder;
+            text-shadow: .1rem .1rem .3rem #333;
+            color: $yellow;
+        }
+
+        h2 {
+            color: white;
+            margin-top: 15px;
+        }
+
+        p {
+            color: $p-color;
+            margin: 15px 0px;
+        }
+
+        button {
+            @extend %buttonn;
+            margin: 20px 0px;
+        }
+
+
+    }
+
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        .vid {
+            position: absolute;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            width: 100%;
+            object-fit: cover;
+            display: none;
+
+            &:first-child {
+                display: block;
+            }
+        }
+    }
+
+    .controls {
+        width: fit-content;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        span {
+            width: 25px;
+            height: 15px;
+            background-color: $yellow;
+            border: 2px solid black;
+            display: inline-block;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: white;
+            }
+        }
+
+        .d-active {
+            background-color: white;
+        }
+    }
+}
+
+// *************************
+//         about
+// *************************
+.about {
+    h2 {
+        @extend %headerSec;
+
+        span {
+            @extend %headerSec;
+            color: black;
+        }
+    }
+
+    .row>div:first-child {
+        flex-wrap: wrap;
+
+        p {
+            color: #333;
+        }
+
+        button {
+            @extend %buttonn;
+            margin: 35px auto;
+            box-shadow: .1rem .1rem .3rem #888,
+                -.1rem -.1rem .3rem #888;
+        }
+    }
+
+    .row>div:last-child {
+        text-align: center;
+
+        img {
+            margin-top: -30px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// *************************
+//         special
+// *************************
+.special {
+    background-color: black;
+
+    >h2 {
+        @extend %headerSec;
+
+        span {
+            @extend %headerSec;
+            color: white;
+        }
+    }
+
+    >p {
+        text-align: center;
+        color: $p-color;
+        margin: 30px auto 50px;
+    }
+
+    .card-container {
+        padding-top: 35;
+        padding-bottom: 35px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+
+        .card {
+            width: 27.5%;
+            margin: 20px 0px;
+            padding: 5px;
+            transition: .35s !important;
+            border: 1px solid black;
+
+            @media screen and (max-width:991px) {
+                width: 42.5%;
+                margin: 20px auto;
+            }
+
+            @media screen and (max-width:767px) {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            img {
+                height: 12rem;
+                object-fit: cover;
+            }
+
+            p {
+                color: #333;
+                margin: 0px !important;
+                font-size: 14px;
+            }
+
+            button {
+                @extend %buttonn;
+                background-color: #333;
+                color: white;
+                font-size: 16px;
+                margin-top: 20px;
+                margin-bottom: 25px;
+                box-shadow: .1rem .1rem .3rem #888,
+                    -.1rem -.1rem .3rem #888;
+
+                &:hover {
+                    color: #333;
+                    font-weight: bold;
+                    // box-shadow:none;    
+                }
+            }
+
+            &:hover {
+                transform: scale(.95);
+            }
+        }
+
+
+    }
+}
+
+// *************************
+//         dishes
+// *************************
+.dishes {
+    >h2 {
+        @extend %headerSec;
+
+        span {
+            @extend %headerSec;
+            color: black;
+        }
+    }
+
+    .container {
+
+        .d {
+            border-radius: 25px;
+
+            @media screen and (max-width:575px) {
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            @media screen and (min-width:576px) {
+                width: 48%;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            @media screen and (min-width:768px) {
+                width: 30%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            height:225px;
+            border:5px solid black;
+            position:relative;
+            overflow:hidden;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+            .d-detail {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(black, 0.85);
+                color: white;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                transition: .35s !important;
+                transform: scale(0);
+
+                >* {
+                    width: 100%;
+                }
+
+                p {
+                    font-size: 13px;
+                    margin: 5px !important;
+                    width: 80%;
+                }
+
+                hr {
+                    margin: 0 !important;
+                    height: 3px;
+                    background: $yellow;
+                    display: block;
+                    width: 90%;
+                    color: $yellow;
+                    opacity: 1;
+                }
+
+                button {
+                    @extend %buttonn;
+                    width: 40%;
+                    margin: 15px auto;
+                }
+
+
+
+            }
+
+            cursor: pointer;
+
+            &:hover {
+                .d-detail {
+                    transform: scale(1)
+                }
+            }
+
+        }
+    }
+}
+
+// *************************
+//         contact
+// *************************
+.contact {
+    overflow: hidden;
+    background: url("../Img/wall-sec/contact-wallpaper.jpg"), linear-gradient(to bottom, rgba(0, 0, 0, .95), rgba(0, 0, 0, 0.8));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+
+    h2 {
+        @extend %headerSec;
+
+        span {
+            @extend %headerSec;
+            color: white;
+        }
+    }
+
+   
+
+    form {
+        padding: 30px 0px 50px;
+    }
+
+    .form-control {
+        color: rgb(153, 141, 141) !important;
+        background-color: rgba(1, 1, 1, 0.45);
+
+        &:focus {
+            background-color: rgba(1, 1, 1, 0.75);
+            border-color: #fff200;
+            outline: 0;
+            box-shadow: 0px 0px 1px 0rem rgba(255, 242, 0, .9);
+        }
+
+        &::placeholder {
+            display: none;
+            opacity: 0;
+        }
+    }
+
+    .form-label {
+        color: white;
+        position: relative;
+        transform: translateY(155%);
+        margin-left: 10px;
+
+    }
+
+    button {
+        @extend %buttonn;
+        width: 150px;
+        height: 40px;
+    }
+
+    .website a {
+        position: relative;
+        @extend .hvr-float;
+    }
+
+}
+
+// *************************
+//   Up Arrow
+// *************************
+.up-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    width: 35px;
+    height: 35px;
+    z-index: 1000;
+    border-radius: 50%;
+    box-shadow: .1rem .1rem 1rem #555,
+        -.1rem -.1rem 1rem #555,
+        -.1rem .1rem 1rem #555,
+        .1rem -.1rem 1rem #555;
+
+
+    @media screen and (min-width:768px) {
+        width: 40px;
+        height: 40px;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    @extend .hvr-wobble-vertical;
+
+}

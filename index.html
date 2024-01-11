@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="theme-color" content="#000">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title> Restaurant </title>
+
+		<link rel="shortcut icon" type="image/png"
+			href="data:image/png;base64,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" />
+
+		<meta name="description"
+			content="Welcome to our fast food restaurant! Enjoy delicious meals and quick service. Contact us directly through our website and check out our menu. Learn more about us and read what our customers have to say.">
+
+		<meta name="keywords"
+			content="fast food, restaurant, meals, contact us, menu, about us, customer reviews,html , css , js , sass , jquery , bootsrap">
+
+		<link rel="stylesheet" type="text/css" href="css/cover.css" media="all">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.css" />
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/food.css" media="all">
+
+		<!--[if lt IE 9]> 
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> 
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div id="cover">
+			<span
+				class="spinner-grow me-2" role="status">
+				<span class="visually-hidden"
+					style="opacity: 0.00000001">Loading...</span>
+			</span>
+			Loading
+			Please Wait...
+		</div>
+
+		<div id="body" class="body">
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top ">
+				<div class="container">
+					<a href="#" class="navbar-brand"><svg
+							xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+							width="35" height="35" viewBox="0 0 172 172" style=" fill:#000000;">
+							<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+								stroke-linecap="butt"
+								stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray
+								stroke-dashoffset="0"
+								font-family="none" font-weight="none" font-size="none"
+								text-anchor="none" style="mix-blend-mode: normal">
+								<path d="M0,172v-172h172v172z" fill="none"></path>
+								<g fill="#fff200">
+									<path
+										d="M61.36906,0c-8.00875,0 -13.34344,0.88688 -16.78344,1.85438c-1.72,0.47031 -2.96969,0.9675 -3.84313,1.38406c-0.86,0.41656 -1.53187,0.90031 -1.53187,0.90031l-1.15563,0.86l-0.18812,1.45125c0,0 -3.46688,27.50656 -3.46688,45.15c0,10.61563 5.20031,16.94469 9.84969,20.77438c2.33813,1.92156 4.50156,3.35937 5.81844,4.52844c1.31687,1.16906 1.53187,1.63937 1.53187,2.21719c0,3.23844 -0.86,12.81938 -1.72,23.44844c-0.86,10.62906 -1.73344,22.53469 -1.72,31.59156c0,16.36688 1.14219,25.18188 3.45344,30.67781c1.16906,2.74125 2.78156,4.74344 4.77031,5.87219c1.97531,1.14219 3.99094,1.29 5.53625,1.29c1.53188,0 3.56094,-0.13437 5.53625,-1.27656c1.98875,-1.12875 3.61469,-3.14437 4.77031,-5.88562c2.31125,-5.4825 3.46687,-14.32438 3.45344,-30.67781c0,-9.04344 -0.86,-20.9625 -1.72,-31.59156c-0.87344,-10.62906 -1.72,-20.19656 -1.72,-23.44844c0,-0.59125 0.20156,-1.02125 1.505,-2.16344c1.31688,-1.14219 3.49375,-2.56656 5.81844,-4.47469c4.67625,-3.80281 9.87656,-10.14531 9.87656,-20.88188c0,-11.99969 -3.45344,-45.06937 -3.45344,-45.06937l-0.18813,-1.70656l-1.46469,-0.88688c0,0 -2.02906,-1.16906 -5.6975,-2.10969c-3.66844,-0.94062 -9.25844,-1.8275 -17.26719,-1.8275zM106.65344,0c-0.91375,0 -1.78719,0.36281 -2.44562,1.00781c-0.645,0.645 -1.00781,1.51844 -1.00781,2.43219v37.84c0,2.41875 0.33594,30.94656 0.33594,38.36406c0.01344,3.17125 -0.92719,16.27281 -1.88125,29.83125c-0.94062,13.55844 -1.89469,27.81562 -1.89469,35.00469c0,10.41406 0.30906,16.47438 1.63938,20.73406c0.67187,2.12312 1.73344,3.9775 3.41312,5.16c1.67969,1.1825 3.60125,1.46469 5.2675,1.46469c0,0.01344 0,0.01344 0,0c3.81625,0 8.69406,-2.40531 11.90563,-8.61344c3.21156,-6.22156 5.29437,-16.09813 5.29437,-32.50531c0,-9.23156 -1.84094,-16.39375 -3.60125,-21.99719c-1.76031,-5.61688 -3.27875,-9.70188 -3.27875,-12.40281c0,-4.81062 3.88344,-11.77125 8.29094,-19.82031c4.42094,-8.04906 9.15094,-17.36125 9.16438,-28.07094c0,-0.01344 0,-0.01344 0,-0.01344c0,-5.99313 -0.95406,-15.10375 -5.17344,-24.26813c-4.21938,-9.16437 -11.83844,-18.36906 -24.68469,-23.865c-0.43,-0.18812 -0.88687,-0.28219 -1.34375,-0.28219zM61.36906,6.88c1.45125,0 2.72781,0.05375 3.99094,0.1075v34.2925c-0.01344,1.23625 0.63156,2.39188 1.70656,3.02344c1.075,0.61813 2.39187,0.61813 3.46687,0c1.075,-0.63156 1.72,-1.78719 1.70656,-3.02344v-33.67437c1.85438,0.28219 3.48031,0.57781 4.68969,0.88687c1.88125,0.48375 1.86781,0.59125 2.365,0.81969c0.29563,2.9025 3.26531,32.18281 3.26531,42.28781c0,8.7075 -3.39969,12.34906 -7.33687,15.54719c-1.96188,1.6125 -4.085,2.95625 -6.00656,4.63594c-1.92156,1.67969 -3.85656,4.15219 -3.85656,7.33687c0,4.28656 0.87344,13.41063 1.73344,24.01281c0.86,10.58875 1.70656,22.42719 1.70656,31.02719c0.01344,16.00406 -1.38406,24.37563 -2.9025,28.00375c-0.76594,1.81406 -1.41094,2.33813 -1.85437,2.59344c-0.44344,0.25531 -1.02125,0.36281 -2.10969,0.36281h-0.01344c-1.08844,0 -1.66625,-0.1075 -2.10969,-0.37625c-0.45688,-0.25531 -1.08844,-0.77937 -1.85438,-2.58c-1.51844,-3.62812 -2.91594,-11.99969 -2.91594,-28.00375c-0.01344,-8.61344 0.83313,-20.43844 1.70656,-31.02719c0.86,-10.58875 1.73344,-19.72625 1.73344,-24.01281c0,-3.19812 -1.92156,-5.65719 -3.82969,-7.36375c-1.92156,-1.69312 -4.04469,-3.06375 -6.02,-4.68969c-3.93719,-3.25188 -7.35031,-6.90688 -7.35031,-15.46656c0,-15.74875 2.86219,-39.51969 3.21156,-42.43562c0.51062,-0.215 0.9675,-0.41656 1.94844,-0.69875c1.24969,-0.34938 2.98313,-0.69875 5.16,-0.99438v33.80875c-0.01344,1.23625 0.63156,2.39188 1.70656,3.02344c1.075,0.61813 2.39187,0.61813 3.46687,0c1.075,-0.63156 1.72,-1.78719 1.70656,-3.02344v-34.31937c0.95406,-0.02688 1.8275,-0.08063 2.88906,-0.08063zM110.08,9.83625c7.82063,4.73 13.34344,10.66938 16.34,17.18656c3.655,7.92812 4.55531,16.15187 4.55531,21.40594c-0.01344,8.64031 -3.99094,16.89094 -8.31781,24.76531c-4.31344,7.87437 -9.1375,15.18437 -9.1375,23.12594c0,4.81063 1.92156,9.1375 3.60125,14.45875c1.66625,5.32125 3.27875,11.61 3.27875,19.94125c0,15.8025 -2.16344,24.76531 -4.52844,29.3475c-2.365,4.56875 -4.35375,4.89125 -5.79156,4.89125c-0.94062,0 -1.1825,-0.13437 -1.29,-0.20156c-0.1075,-0.06719 -0.43,-0.33594 -0.81969,-1.6125c-0.80625,-2.53969 -1.33031,-8.43875 -1.33031,-18.66469c0,-6.57094 0.94063,-20.98937 1.88125,-34.52094c0.94063,-13.545 1.90813,-25.98813 1.89469,-30.32844c0,-7.60563 -0.33594,-36.55 -0.33594,-38.35063z">
+									</path>
+								</g>
+							</g>
+						</svg>
+						<div
+							class="d-inline-block ms-3 mb-0 h3 logo-name"><span>K</span>an
+							<span>D</span>on</div>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#link-of-nav"
+						aria-label="Toggle Navigation" aria-controls="link-of-nav"
+						aria-expanded="false"><span
+							class="fas fa-hamburger" id="nav-icon"></span></button>
+					<div class="collapse navbar-collapse pt-4 pt-md-0" id="link-of-nav">
+						<ul class="navbar-nav ms-auto" id="main-ul">
+							<li class="nav-item"><a href="#header" class="nav-link">home</a></li>
+							<li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+							<li class="nav-item"><a href="#special" class="nav-link">special</a></li>
+							<li class="nav-item"><a href="#dishes" class="nav-link">dishes</a></li>
+							<li class="nav-item"><a href="#contact" class="nav-link">contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<header id="header" class="header">
+				<div class="container h-100">
+					<div class="h-100 row align-items-center">
+						<div class="col-md-8 text-md-start text-center content">
+							<h1>food that you can't resist</h1>
+							<h2>enjoy the marvelous taste</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ab quas
+								corrupti, molestias
+								aliquam quisquam voluptatibus dignissimos corporis.</p><a
+								href="#special" class="home-button"><button
+									style="z-index:12;background-color:white; ">get
+									started</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="video-container"><video src="vid/1.mp4" loop muted autoplay
+						class="vid"></video><video src="vid/2.mp4"
+						loop muted autoplay class="vid"></video><video src="vid/3.mp4" loop muted
+						autoplay class="vid"></video></div>
+				<div class="controls"><span class="dots d-active"></span><span
+						class="dots"></span><span class="dots"></span>
+				</div>
+			</header>
+			<section id="about" class="about">
+				<h2 data-aos="zoom-in-up">about <span>us</span></h2>
+				<div class="container align-content-center">
+					<div class="row mt-5 mt-md-0">
+						<div
+							class="col-md-6 align-content-center justify-content-center justify-content-md-start d-flex text-center text-md-start"
+							data-aos="fade-right">
+							<p class="w-100 mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing
+								elit. Dolorum ex,
+								voluptatum nobis iure sunt voluptates non, vitae, quia fugit vero est
+								neque enim dicta
+								impedit deserunt ducimus! Quo, iste ullam.</p>
+							<p class="w-100 my-3">Lorem, ipsum dolor sit amet consectetur adipisicing
+								elit. Dolorum ex,
+								voluptatum nobis iure sunt voluptates non, vitae, quia fugit vero est
+								neque enim dicta
+								impedit deserunt ducimus! Quo, iste ullam.</p><a href="#"><button> learn
+									more</button></a>
+						</div>
+						<div class="col-md-6 d-none d-md-block" data-aos="fade-left"><img
+								src="img/wall-sec/about-wallpaper.png"
+								alt="chef photo"></div>
+					</div>
+				</div>
+			</section>
+			<section id="special" class="special">
+				<h2 data-aos="zoom-in-up"><span>our</span> special</h2>
+				<p class="h5" data-aos="zoom-in-up">Lorem ipsum dolor sit amet consectetur
+					adipisicing elit.</p>
+				<div class="card-container container">
+					<div
+						class="card text-center text-dark bg-white border border-5 border-white"
+						data-aos="fade-right"><img
+							src="img/sp/special1.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant"
+							class="card-img-top">
+						<div class="card-body">
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Minima laudantium
+								deleniti pariatur, harum magni dolores.</p><a href="#"><button>read
+									more</button></a>
+						</div>
+					</div>
+					<div
+						class="card text-center text-dark bg-white border border-5 border-white"
+						data-aos="zoom-in-up"><img
+							src="img/sp/special2.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant"
+							class="card-img-top">
+						<div class="card-body">
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Minima laudantium
+								deleniti pariatur, harum magni dolores.</p><a href="#"><button>read
+									more</button></a>
+						</div>
+					</div>
+					<div
+						class="card text-center text-dark bg-white border border-5 border-white"
+						data-aos="fade-left"><img
+							src="img/sp/special3.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant"
+							class="card-img-top">
+						<div class="card-body">
+							<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
+								elit. Quo ex delectus
+								voluptatem fugit dolor porro ea laborum autem similiq</p><a
+								href="#"><button>read
+									more</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="dishes" class="dishes pb-5">
+				<h2 data-aos="zoom-in-up"> <span>our</span> dishes</h2>
+				<div
+					class="container d-flex flex-wrap justify-content-between align-items-center align-content-center mt-5">
+					<div data-aos="zoom-in" class="d"><img src="img/dishes/Dishes0.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant">
+						<div class="d-detail align-content-center text-center">
+							<h2 class="my-3">dish 1</h2>
+							<hr>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+								iste!</p>
+							<hr><a href="#"><button>view</button></a>
+						</div>
+					</div>
+					<div data-aos="zoom-in" class="d"><img src="img/dishes/Dishes1.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant">
+						<div class="d-detail align-content-center text-center">
+							<h2 class="my-3">dish 2</h2>
+							<hr>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+								iste!</p>
+							<hr><a href="#"><button>view</button></a>
+						</div>
+					</div>
+					<div data-aos="zoom-in" class="d"><img src="img/dishes/Dishes2.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant">
+						<div class="d-detail align-content-center text-center">
+							<h2 class="my-3">dish 3</h2>
+							<hr>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+								iste!</p>
+							<hr><a href="#"><button>view</button></a>
+						</div>
+					</div>
+					<div data-aos="zoom-in" class="d"><img src="img/dishes/Dishes3.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant">
+						<div class="d-detail align-content-center text-center">
+							<h2 class="my-3">dish 4</h2>
+							<hr>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+								iste!</p>
+							<hr><a href="#"><button>view</button></a>
+						</div>
+					</div>
+					<div data-aos="zoom-in" class="d"><img src="img/dishes/Dishes4.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant">
+						<div class="d-detail align-content-center text-center">
+							<h2 class="my-3">dish 5</h2>
+							<hr>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+								iste!</p>
+							<hr><a href="#"><button>view</button></a>
+						</div>
+					</div>
+					<div data-aos="zoom-in" class="d"><img src="img/dishes/Dishes5.jpeg"
+							alt="Picture of a delicious meal produced by our restaurant">
+						<div class="d-detail align-content-center text-center">
+							<h2 class="my-3">dish 6</h2>
+							<hr>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+								iste!</p>
+							<hr><a href="#"><button>view</button></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="contact" class="contact">
+				<h2 data-aos="zoom-in-up">contact <span>us</span></h2>
+				<p data-aos="zoom-in-up"
+					class="container text-center text-white dd34 m-auto">
+					To request a landing page similar to this page, <span
+						class=" text-danger fw-bold"> fill out the form below </span> and I will
+					reply to you as soon as possible. <span
+						class="text-danger fw-bold">You can also talk
+						to
+						me via the social media icons</span> at the bottom of the site.
+				</p>
+				<div class="container">
+					<form action="https://formsubmit.co/mohammad.al.laith.mousa@gmail.com"
+						method="POST"
+						class="row gx-3 gy-3 needs-validation flex-wrap d-flex align-items-center"
+						novalidate autocomplete="off"
+						data-aos="fade-up">
+						<div class="col-12 col-md-6">
+							<label for="InFullName"
+								class="form-label">Full Name</label>
+							<input type="text"
+								class="form-control" id="InFullName" required placeholder="Full Name"
+								name="Full Name" minlength="10">
+							<div class="valid-feedback">Name Is Set</div>
+							<div class="invalid-feedback">Please Write Your Full Name</div>
+						</div>
+						<div class="col-12 col-md-6">
+							<label for="InPhone" class=" form-label">Your
+								Number</label>
+							<input type="tel"
+								class="form-control" id="InPhone" required placeholder="Phone Number"
+								length="10"
+								oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+								name="Phone">
+							<div class="invalid-feedback">Please Write A Valid Phone Number</div>
+							<div class="valid-feedback">Looks Good Number</div>
+						</div>
+						<div class=" col-12">
+							<label for="InEmail" class=" form-label">Your
+								Email</label>
+							<input type="email"
+								name="Email" class="form-control" id="InEmail" required
+								placeholder="Your Email">
+							<div class="valid-feedback">Looks Good Email</div>
+							<div class="invalid-feedback">Please Write A Valid Email</div>
+						</div>
+						<div class="col-12">
+							<label for="Your-Massage" class="form-label">Message (
+								Optional
+								)</label>
+							<textarea name="textarea" id="Your-Massage"
+								placeholder="Message ( Optional )"
+								class="form-control w-100"
+								style="height:200px;resize:none"></textarea>
+						</div>
+
+						<input type="hidden" name="_captcha" value="false" />
+						<input type="text" name="_honey" class="d-none" />
+						<input type="hidden" name="_subject"
+							value="New Email From My Website Restaurant Landing Page" />
+						<input type="hidden" name="_next"
+							value="https://eng-mohammad-mousa.github.io/Landing_Page_Restaurant/thanks.html" />
+						<div class="col-md-4 col-12 mt-5 text-md-start text-center"><button
+								type="submit">send</button>
+						</div>
+						<div
+							class="website col-md-8 ms-md-auto mt-5 mt-md-auto text-center text-md-end"><a
+								href="https://wa.me/963950556805"><img
+									src="https://img.icons8.com/color/48/000000/telegram-app--v2.png" /></a>
+							<a
+								href="https://wa.me/963950556805"><svg
+									xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="43"
+									height="43" viewBox="0 0 172 172"
+									style=" fill:#000000;transform: translateY(-2px);">
+									<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+										stroke-linecap="butt"
+										stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray
+										stroke-dashoffset="0"
+										font-family="none" font-weight="none" font-size="none"
+										text-anchor="none"
+										style="mix-blend-mode: normal">
+										<path d="M0,172v-172h172v172z" fill="none"></path>
+										<g fill="#2ecc71">
+											<path
+												d="M86,2.6875c-45.95625,0 -83.3125,37.35625 -83.3125,83.3125c0,14.10938 3.4927,27.95053 10.34583,40.17865l-7.1203,26.06927c-1.20938,4.16563 -0.00157,8.4651 3.08905,11.55573c3.09062,3.09062 7.39272,4.30052 11.55835,3.22552l27.1427,-7.12292c11.825,6.18125 24.99322,9.40625 38.43072,9.40625c45.95625,0 83.3125,-37.35625 83.3125,-83.3125c0,-22.30625 -8.59948,-43.13542 -24.32135,-58.8573c-15.85625,-15.72188 -36.81875,-24.4552 -59.125,-24.4552zM86,10.75c20.15625,0 39.1026,7.79428 53.21198,22.03803c14.24375,14.24375 22.1724,33.1901 22.03802,53.21197c0,41.52188 -33.72812,75.25 -75.25,75.25c-12.49688,0 -24.9948,-3.22605 -36.01355,-9.13855c-0.5375,-0.26875 -1.20728,-0.5354 -1.87915,-0.5354c-0.40312,0 -0.67292,-0.00052 -1.07605,0.13385l-28.62292,7.52448c-2.01562,0.5375 -3.35728,-0.53855 -3.89478,-1.07605c-0.5375,-0.5375 -1.61355,-1.87915 -1.07605,-3.89478l7.52447,-27.68335c0.26875,-1.075 0.13595,-2.14843 -0.40155,-3.08905c-6.45,-11.2875 -9.81042,-24.3224 -9.81042,-37.49115c0,-41.52187 33.72813,-75.25 75.25,-75.25zM86,22.84375c-34.80312,0 -63.15625,28.21875 -63.15625,63.15625c0,11.15313 2.9573,22.0375 8.46667,31.57813c2.15,3.7625 2.68645,8.19583 1.61145,12.36145l-3.8974,14.10938l15.05157,-3.89478c1.34375,-0.40312 2.6875,-0.53802 4.03125,-0.53802c2.6875,0 5.37395,0.67188 7.65833,2.01563c9.27187,4.8375 19.61875,7.52448 30.23438,7.52448c34.80313,0 63.15625,-28.35312 63.15625,-63.15625c0,-16.93125 -6.58542,-32.78855 -18.5448,-44.74792c-11.825,-11.825 -27.6802,-18.40833 -44.61145,-18.40833zM57.9151,49.31458h3.76355c1.47812,0 2.95468,0.13437 4.4328,3.35938c1.74687,3.89687 5.64375,13.70677 6.04688,14.6474c0.5375,0.94062 0.80835,2.14948 0.13647,3.49323c-0.67187,1.34375 -0.94062,2.15 -2.01562,3.35938c-0.94062,1.20937 -2.15157,2.55522 -2.95782,3.49585c-0.94062,0.94063 -2.0151,2.01563 -0.80572,4.03125c1.20937,2.01563 5.1052,8.46458 11.0177,13.7052c7.525,6.71875 13.97552,8.8698 15.99115,9.81042c2.01563,0.94063 3.0922,0.80573 4.30157,-0.53802c1.20938,-1.34375 4.97083,-5.77918 6.31458,-7.7948c1.34375,-2.01562 2.68855,-1.61145 4.43542,-0.93957c1.88125,0.67188 11.55573,5.5078 13.57135,6.44843c2.01563,0.94062 3.3578,1.4797 3.76093,2.28595c0.5375,1.075 0.53907,4.97082 -1.07343,9.67395c-1.6125,4.56875 -9.675,9.1375 -13.4375,9.40625c-3.62813,0.26875 -6.98907,1.61355 -23.78595,-4.97082c-20.15625,-7.92813 -32.92083,-28.62293 -33.86145,-29.96668c-0.94063,-1.34375 -8.0625,-10.74843 -8.0625,-20.5578c0,-9.80937 5.1052,-14.51355 6.98645,-16.52917c1.88125,-2.01562 3.8974,-2.4198 5.24115,-2.4198z">
+											</path>
+										</g>
+									</g>
+								</svg></a> <a href="https://wa.me/963950556805"><img
+									src="https://img.icons8.com/fluent/48/000000/facebook-new.png" /></a>
+							<a
+								href="https://wa.me/963950556805"><img
+									src="https://img.icons8.com/fluent/48/000000/instagram-new.png" /></a>
+							<a
+								href="https://wa.me/963950556805"><img
+									src="https://img.icons8.com/color/48/000000/twitter-circled--v4.png" /></a></div>
+					</form>
+				</div>
+			</section>
+			<footer class="footer pt-5" id="footer">
+				<div class="container">
+					<div class="footer-container d-flex flex-wrap row">
+						<div class="col-6 text-center mb-3 links ">
+							<h2>Links</h2>
+							<div class="container-footer-link"><a href="#header">home</a><a
+									href="#about">about</a><a
+									href="#special">special</a><a href="#dishes">dishes</a><a
+									href="#contact">contact</a>
+							</div>
+						</div>
+						<div class="col-6 text-center mb-3 social-icon">
+							<h2>
+								<div class="d-inline-block h3 logo-name"><span>K</span>an
+									<span>D</span>on</div>
+							</h2>
+							<div class="container-social-icon"><a
+									href="https://wa.me/963950556805"><i class='fab fa-facebook-f'> </i>
+								</a> <a href="https://wa.me/963950556805"><i
+										class='fab fa-instagram'></i> </a> <a
+									href="https://wa.me/963950556805"><i
+										class='fab fa-telegram-plane'></i> </a> <a
+									href="https://wa.me/963950556805"><i class='fab fa-whatsapp'></i>
+								</a> <a href="https://wa.me/963950556805"><i
+										class='fab fa-twitter'></i> </a></div>
+						</div>
+					</div>
+					<hr>
+					<div class="text-center h4 mt-3 py-3">
+						<h5 class=" d-md-inline-block d-block">Created By </h5>
+						<h5 class=" d-md-inline-block d-block my-1 my-md-0">
+							<a
+								class="eng"
+								href="https://wa.me/963950556805">Eng Mohammad mousa</a>
+						</h5>
+						<h5 class=" d-md-inline-block d-block"> All Right Reserved</h5>
+					</div>
+				</div>
+			</footer>
+
+			<a id="up-arrow" class="up-arrow" href="#header">
+
+				<svg
+					xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+					width="100%" height="100%" viewBox="0 0 172 172" style=" fill:#000000;">
+					<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+						stroke-linecap="butt" stroke-linejoin="miter"
+						stroke-miterlimit="10" stroke-dasharray stroke-dashoffset="0"
+						font-family="none" font-weight="none"
+						font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+						<path d="M0,172v-172h172v172z" fill="none"></path>
+						<g fill="#fff200">
+							<path
+								d="M85.89922,6.78594c-2.11818,0.03233 -4.10338,1.03856 -5.38172,2.72781l-23.46187,23.46188c-1.79732,1.72562 -2.52133,4.28807 -1.89279,6.69911c0.62854,2.41103 2.5114,4.2939 4.92243,4.92243c2.41103,0.62854 4.97349,-0.09547 6.69911,-1.89279l12.33563,-12.33562v62.51125c-0.03509,2.48118 1.2685,4.78904 3.41161,6.03987c2.1431,1.25083 4.79369,1.25083 6.93679,0c2.1431,-1.25083 3.4467,-3.55869 3.41161,-6.03987v-62.51125l12.33563,12.33562c1.72562,1.79732 4.28807,2.52133 6.69911,1.89279c2.41103,-0.62854 4.2939,-2.5114 4.92243,-4.92243c0.62854,-2.41103 -0.09547,-4.97349 -1.89279,-6.69911l-23.48875,-23.48875c-1.32111,-1.72795 -3.38147,-2.72948 -5.55641,-2.70094zM38.0886,25.06766c-1.78785,-0.04481 -3.5229,0.60824 -4.8375,1.82078c-16.15534,14.46904 -26.37109,35.52158 -26.37109,58.89656c0,43.61533 35.50467,79.12 79.12,79.12c43.61533,0 79.12,-35.50467 79.12,-79.12c0,-23.3781 -10.21499,-44.43061 -26.3711,-58.89656c-1.82674,-1.67192 -4.41099,-2.23326 -6.76672,-1.46985c-2.35573,0.76341 -4.11954,2.73381 -4.61842,5.15938c-0.49888,2.42557 0.34411,4.93213 2.20734,6.56328c13.37286,11.97388 21.7889,29.26265 21.7889,48.64375c0,36.17891 -29.18109,65.36 -65.36,65.36c-36.17891,0 -65.36,-29.18109 -65.36,-65.36c0,-19.37733 8.41529,-36.67279 21.7889,-48.65047c2.13907,-1.86314 2.9155,-4.84806 1.95539,-7.51735c-0.96011,-2.66929 -3.45995,-4.47578 -6.2957,-4.54953z">
+							</path>
+						</g>
+					</g>
+				</svg>
+
+			</a>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/food.js"></script>
+	</body>
+
+</html>

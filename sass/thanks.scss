@@ -1,0 +1,49 @@
+@keyframes hvv {
+    0% {
+        box-shadow: 0 0 0 0 #0f5132
+    }
+
+    100% {
+        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0)
+    }
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh
+}
+
+#body .alert {
+    width: 80%
+}
+
+@media screen and (min-width: 992px) {
+    #body .alert {
+        width: 60%
+    }
+}
+
+#body .alert .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center
+}
+
+#body .back-to-home {
+    border: 1px solid #0f5132;
+    padding: 10px 20px;
+    border-radius: 15px;
+    width: fit-content;
+    color: #0f5132;
+    animation: hvv 1200ms infinite;
+    transition: .3s all linear;
+    text-decoration: none;
+}
+
+#body .back-to-home:hover {
+    transform: scale(1.08)
+}

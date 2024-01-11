@@ -1,0 +1,10 @@
+/* ******************* */
+/*        Grid         */
+/* ******************* */
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+body{overflow-x:hidden;}
+#body > :not(span):not(nav):not(header){overflow-x:hidden;}

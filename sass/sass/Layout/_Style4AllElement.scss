@@ -1,0 +1,51 @@
+/* ******************* */
+/* Style 4 All Element */
+/* ******************* */
+* {
+    transition: .35s;
+    scroll-behavior: smooth;
+}
+
+::selection {
+    color: black;
+    background: $yellow;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// For Fire Fox 
+*,
+:root {
+    scrollbar-color: $yellow $black;
+    scrollbar-width: thin;
+}
+
+// For Chrome And Opera
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: $black;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 15px;
+    background-color: $yellow;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-clip: padding-box;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid,
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    border-color: white;
+}

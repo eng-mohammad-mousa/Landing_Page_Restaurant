@@ -1,0 +1,49 @@
+/* ******************* */
+/*   Component Button  */
+/* ******************* */
+%buttonn {
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 5px 15px !important;
+    transition: .55s !important;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $yellow;
+        height: 100%;
+        width: 0%;
+        transition: .2s;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+
+    &:hover {
+        box-shadow: 1.75px 1.75px 3.5px #333,
+            -1.75px 1.75px 3.5px #333,
+            1.75px -1.75px 3.5px #333,
+            -1.75px -1.75px 3.5px #333;
+    }
+}
+
+
+.about button,
+.contact button,
+header button {
+    background-color: white !important;
+    z-index: 100 !important;
+}
